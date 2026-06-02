@@ -1,11 +1,49 @@
-import Image from "next/image";
-import { ModeToggle } from "@/components/mode-toggle";
+import { About } from "@/components/sections/About"
+import { Approach } from "@/components/sections/Approach"
+import { Contact } from "@/components/sections/Contact"
+import { Footer } from "@/components/sections/Footer"
+import { Hero } from "@/components/sections/Hero"
+import { NavBar } from "@/components/sections/NavBar"
+import { Services } from "@/components/sections/Services"
+import { Testimonials } from "@/components/sections/Testimonials"
+import { TrustIndicators } from "@/components/sections/TrustIndicators"
+import { siteConfig } from "@/config/site"
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  name: siteConfig.name,
+  description: siteConfig.description,
+  url: siteConfig.url,
+  telephone: siteConfig.phone,
+  email: siteConfig.email,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: siteConfig.address.street,
+    addressLocality: siteConfig.address.city,
+    addressRegion: siteConfig.address.state,
+    postalCode: siteConfig.address.zip,
+    addressCountry: "BR",
+  },
+  openingHours: ["Mo-Th 09:00-18:00", "Fr 09:00-15:00"],
+}
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <ModeToggle />
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start"></main>
+    <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <NavBar />
+      <Hero />
+      <TrustIndicators />
+      <About />
+      <Services />
+      <Approach />
+      <Testimonials />
+      <Contact />
+      <Footer />
     </div>
-  );
+  )
 }
