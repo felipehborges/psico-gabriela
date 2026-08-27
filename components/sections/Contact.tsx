@@ -39,7 +39,9 @@ export function Contact() {
     startTransition(async () => {
       const result = await sendContactEmail(data)
       if (result.success) {
-        toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.")
+        toast.success(
+          "Mensagem enviada com sucesso! Entraremos em contato em breve.",
+        )
         form.reset()
       } else {
         toast.error("Erro ao enviar mensagem. Por favor, tente novamente.")
@@ -55,15 +57,16 @@ export function Contact() {
           <div className="space-y-8">
             <div>
               <p className="text-primary font-medium tracking-wide uppercase text-sm mb-4">
-                Entre em Contato
+                Vamos conversar?
               </p>
               <h2 className="font-serif text-4xl md:text-5xl leading-tight text-foreground mb-6 text-balance">
-                Pronta para dar o primeiro passo?
+                Talvez você não precise ter todas as respostas para começar
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Dar o primeiro passo é muitas vezes a parte mais difícil. Ofereço
-                uma consulta inicial gratuita de 15 minutos para conversarmos
-                sobre suas necessidades e verificarmos se somos compatíveis.
+                Se existe algo que tem pesado, incomodado ou feito você sentir
+                que precisa olhar para si com mais cuidado, a psicoterapia pode
+                ser um espaço para começar esse processo. Estou aqui para
+                acompanhar você nessa caminhada.
               </p>
             </div>
 
@@ -124,7 +127,7 @@ export function Contact() {
           <Card className="bg-card border-border">
             <CardContent className="p-8">
               <h3 className="font-serif text-2xl text-foreground mb-6">
-                Solicite uma Consulta
+                Agende seu atendimento
               </h3>
               <Form {...form}>
                 <form
@@ -230,8 +233,8 @@ export function Contact() {
                     {!isPending && <ChevronRight className="ml-2 h-4 w-4" />}
                   </Button>
                   <p className="text-xs text-muted-foreground text-center">
-                    Suas informações são completamente confidenciais e nunca
-                    serão compartilhadas.
+                    Use este formulário para solicitar contato. Não é necessário
+                    relatar informações sensíveis ou toda a sua história aqui.
                   </p>
                 </form>
               </Form>

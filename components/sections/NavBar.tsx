@@ -27,7 +27,7 @@ export function NavBar() {
             href="#servicos"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            Serviços
+            Psicoterapia
           </Link>
           <Link
             href="#abordagem"
@@ -36,10 +36,10 @@ export function NavBar() {
             Abordagem
           </Link>
           <Link
-            href="#depoimentos"
+            href="#como-funciona"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            Depoimentos
+            Como funciona
           </Link>
           <Link
             href="#contato"
@@ -54,7 +54,7 @@ export function NavBar() {
             className="bg-primary text-primary-foreground hover:bg-primary/90"
             asChild
           >
-            <Link href="#contato">Agendar Consulta</Link>
+            <Link href="#contato">Agendar atendimento</Link>
           </Button>
         </div>
       </div>

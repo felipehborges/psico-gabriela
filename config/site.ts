@@ -2,7 +2,7 @@ export const siteConfig = {
   // Identity
   name: "Gabriela Almeida",
   tagline: "Psicóloga Clínica",
-  credentials: "CRP 06/12345",
+  credentials: "Psicóloga clínica desde 2021",
 
   // Contact
   phone: "(11) 99123-4567",
@@ -25,62 +25,62 @@ export const siteConfig = {
   // SEO
   url: "https://www.gabrielaalmeida.com.br",
   description:
-    "Psicóloga clínica em São Paulo especializada em ansiedade, depressão, trauma e terapia de casal. Agende sua consulta inicial gratuita.",
+    "Psicoterapia para adultos e idosos, online e presencial, com escuta acolhedora e abordagem fundamentada na Logoterapia.",
   ogImage: "/og-image.jpg",
 
   // Trust indicators row
   stats: [
-    { value: "15+", label: "Anos de Experiência" },
-    { value: "500+", label: "Pacientes Atendidos" },
-    { value: "CRP", label: "Psicologia Clínica" },
-    { value: "100%", label: "Confidencial" },
+    { value: "Desde 2021", label: "Atuação clínica" },
+    { value: "Adultos", label: "Atendimento individual" },
+    { value: "Idosos", label: "Diferentes momentos da vida" },
+    { value: "Online e presencial", label: "Formatos de atendimento" },
   ],
 
   // Credential badges in About section
   badges: [
-    "Psicóloga Registrada",
-    "Certificada em TCC",
-    "Treinada em EMDR",
-    "Baseada em Mindfulness",
+    "Formada pela UMC em 2020",
+    "Atuação clínica desde 2021",
+    "Abordagem em Logoterapia",
+    "Atendimento individualizado",
   ],
 
   // Services — icon must be a key in the iconMap defined in Services.tsx
   services: [
     {
       icon: "Brain",
-      title: "Ansiedade & Depressão",
+      title: "Ansiedade e preocupações",
       description:
-        "Aprenda a gerenciar pensamentos e sentimentos avassaladores, desenvolvendo estratégias de enfrentamento que funcionam para a sua vida.",
+        "Um espaço para compreender preocupações excessivas, dificuldades emocionais e momentos de sofrimento.",
     },
     {
       icon: "Heart",
-      title: "Questões de Relacionamento",
+      title: "Autoestima e autoconhecimento",
       description:
-        "Navegue pelos desafios dos relacionamentos, melhore a comunicação e construa conexões mais saudáveis com os outros.",
+        "Olhar para si com mais consciência, reconhecendo valores, experiências, autocobranças e possibilidades de escolha.",
     },
     {
       icon: "Users",
-      title: "Terapia de Casal",
+      title: "Relacionamentos e família",
       description:
-        "Fortaleça sua parceria através de melhor compreensão, comunicação e resolução de conflitos.",
+        "Compreender conflitos nos relacionamentos e questões familiares ou afetivas a partir da sua própria história.",
     },
     {
       icon: "Leaf",
-      title: "Trauma & TEPT",
+      title: "Luto e processos de perda",
       description:
-        "Cure-se de experiências passadas usando abordagens baseadas em evidências como EMDR e TCC focada em trauma.",
+        "Acolhimento para atravessar perdas, mudanças e experiências que transformam a maneira como você vive.",
     },
     {
       icon: "Calendar",
-      title: "Transições de Vida",
+      title: "Mudanças e escolhas",
       description:
-        "Encontre apoio durante grandes mudanças na vida — mudanças de carreira, perdas, divórcio ou a chegada de um filho.",
+        "Reflexão diante de transições de vida, decisões importantes, conflitos profissionais e projetos pessoais.",
     },
     {
       icon: "Brain",
-      title: "Crescimento Pessoal",
+      title: "Sentido e projetos de vida",
       description:
-        "Desenvolva maior autoconhecimento, confiança e clareza sobre seus valores e direção de vida.",
+        "Investigar sentimentos de vazio, questões de identidade e aquilo que possui significado para você.",
     },
   ],
 
@@ -88,51 +88,29 @@ export const siteConfig = {
   approach: [
     {
       number: "01",
-      title: "Espaço Seguro & Sem Julgamentos",
+      title: "Escuta e acolhimento",
       description:
-        "Sinta-se verdadeiramente ouvido(a) e acolhido(a) ao compartilhar suas experiências e preocupações.",
+        "Um espaço profissional, sigiloso e sem julgamentos para falar sobre o que você está vivendo.",
     },
     {
       number: "02",
-      title: "Métodos Baseados em Evidências",
+      title: "Compreensão integral",
       description:
-        "Beneficie-se de abordagens terapêuticas comprovadas, incluindo TCC, EMDR e técnicas de mindfulness.",
+        "Um olhar para sua história, seus valores, escolhas, relacionamentos, sofrimentos e o que importa para você.",
     },
     {
       number: "03",
-      title: "Tratamento Personalizado",
+      title: "Construção conjunta",
       description:
-        "Receba um plano customizado que aborda seus objetivos e desafios específicos.",
-    },
-  ],
-
-  // Patient testimonials
-  testimonials: [
-    {
-      quote:
-        "A Gabriela me ajudou a entender padrões que eu vinha repetindo por anos. Sua orientação gentil mudou minha vida.",
-      author: "Fernanda S.",
-      detail: "Ansiedade & Depressão",
-    },
-    {
-      quote:
-        "Finalmente me sinto eu mesma novamente. As ferramentas que aprendi na terapia fizeram uma diferença enorme no meu dia a dia.",
-      author: "Ricardo M.",
-      detail: "Transição de Vida",
-    },
-    {
-      quote:
-        "Eu e meu parceiro estamos nos comunicando melhor do que nunca. A terapia de casal foi a melhor decisão que tomamos.",
-      author: "Juliana & Marcos",
-      detail: "Terapia de Casal",
+        "Um processo individualizado, construído no seu tempo e de acordo com suas necessidades e objetivos.",
     },
   ],
 
   // Footer navigation links
   footerLinks: [
-    { label: "Política de Privacidade", href: "#" },
-    { label: "Termos de Uso", href: "#" },
-    { label: "Código de Ética", href: "#" },
+    { label: "Sobre", href: "#sobre" },
+    { label: "Abordagem", href: "#abordagem" },
+    { label: "Contato", href: "#contato" },
   ],
 
   copyrightYear: 2026,

@@ -11,12 +11,19 @@ export function Approach() {
               Minha Abordagem
             </p>
             <h2 className="font-serif text-4xl md:text-5xl leading-tight text-foreground text-balance">
-              Um caminho colaborativo para a cura
+              Logoterapia: uma psicoterapia voltada para o sentido da vida
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Acredito que a terapia funciona melhor quando é uma verdadeira
-              parceria. Juntos, vamos explorar o que está te impedindo e
-              desenvolver estratégias práticas para seguir em frente.
+              Minha prática clínica é fundamentada na Logoterapia, abordagem
+              desenvolvida pelo psiquiatra e neurologista austríaco Viktor Emil
+              Frankl. Ela parte da compreensão de que o ser humano está
+              constantemente em busca de sentido para a própria existência.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Isso não exige encontrar uma grande resposta para a vida. Mesmo
+              diante de circunstâncias que não escolhemos, podemos refletir
+              sobre como nos posicionamos e sobre aquilo que dá significado à
+              nossa existência.
             </p>
 
             <div className="space-y-6 pt-4">

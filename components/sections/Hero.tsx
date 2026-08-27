@@ -1,8 +1,8 @@
-import { ChevronRight } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/config/site";
+import { ChevronRight } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { siteConfig } from "@/config/site"
 
 export function Hero() {
   return (
@@ -12,16 +12,17 @@ export function Hero() {
           <div className="inline-flex items-center gap-2 bg-secondary px-4 py-2 rounded-full">
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
             <span className="text-sm text-muted-foreground">
-              Aceitando novos pacientes
+              Psicoterapia online e presencial
             </span>
           </div>
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-foreground text-balance">
-            Encontre clareza, cura &amp; paz interior
+            Um espaço para compreender o que você sente, olhar para a sua
+            história e encontrar novos caminhos
           </h1>
           <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-            Um espaço seguro e acolhedor onde você pode explorar seus
-            pensamentos, processar emoções e desenvolver ferramentas para viver
-            uma vida mais plena.
+            A psicoterapia pode ser um espaço de acolhimento, reflexão e
+            transformação — respeitando sua história, seu momento de vida e
+            aquilo que você busca compreender.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
@@ -30,7 +31,7 @@ export function Hero() {
               asChild
             >
               <Link href="#contato">
-                Agende uma Consulta Gratuita
+                Agende seu atendimento
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -40,7 +41,7 @@ export function Hero() {
               className="border-border text-foreground hover:bg-secondary bg-transparent"
               asChild
             >
-              <Link href="#abordagem">Conheça Minha Abordagem</Link>
+              <Link href="#abordagem">Conheça a Logoterapia</Link>
             </Button>
           </div>
         </div>
@@ -60,5 +61,5 @@ export function Hero() {
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -1,11 +1,12 @@
 import { About } from "@/components/sections/About"
 import { Approach } from "@/components/sections/Approach"
 import { Contact } from "@/components/sections/Contact"
+import { Faq } from "@/components/sections/Faq"
 import { Footer } from "@/components/sections/Footer"
 import { Hero } from "@/components/sections/Hero"
 import { NavBar } from "@/components/sections/NavBar"
 import { Services } from "@/components/sections/Services"
-import { Testimonials } from "@/components/sections/Testimonials"
+import { TherapyProcess } from "@/components/sections/TherapyProcess"
 import { TrustIndicators } from "@/components/sections/TrustIndicators"
 import { siteConfig } from "@/config/site"
 
@@ -41,7 +42,8 @@ export default function Home() {
       <About />
       <Services />
       <Approach />
-      <Testimonials />
+      <TherapyProcess />
+      <Faq />
       <Contact />
       <Footer />
     </div>
