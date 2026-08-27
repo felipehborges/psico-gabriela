@@ -5,22 +5,13 @@ export const siteConfig = {
   credentials: "Psicóloga clínica desde 2021",
 
   // Contact
-  phone: "(11) 99123-4567",
-  email: "contato@gabrielaalmeida.com.br",
-  address: {
-    street: "Rua das Flores, 123 - Sala 200",
-    city: "São Paulo",
-    state: "SP",
-    zip: "01234-000",
-    full: "Rua das Flores, 123 - Sala 200, São Paulo, SP - 01234-000",
+  phone: "(11) 91506-7221",
+  whatsappUrl: "https://wa.me/5511915067221",
+  email: "psico.gabrielanorte@gmail.com",
+  instagram: {
+    handle: "@psicologa.gabbriela",
+    url: "https://www.instagram.com/psicologa.gabbriela",
   },
-
-  // Operating hours
-  hours: [
-    { days: "Segunda a Quinta", time: "9h00 - 18h00" },
-    { days: "Sexta", time: "9h00 - 15h00" },
-    { days: "Sábados", time: "mediante agendamento" },
-  ],
 
   // SEO
   url: "https://www.gabrielaalmeida.com.br",

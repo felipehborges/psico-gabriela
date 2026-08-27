@@ -19,31 +19,31 @@ export function NavBar() {
         <div className="hidden md:flex items-center gap-8">
           <Link
             href="#sobre"
-            className="text-muted-foreground hover:text-foreground transition-colors"
+            className="text-muted-foreground hover:text-foreground transition-all duration-200 hover:-translate-y-0.5"
           >
             Sobre
           </Link>
           <Link
             href="#servicos"
-            className="text-muted-foreground hover:text-foreground transition-colors"
+            className="text-muted-foreground hover:text-foreground transition-all duration-200 hover:-translate-y-0.5"
           >
             Psicoterapia
           </Link>
           <Link
             href="#abordagem"
-            className="text-muted-foreground hover:text-foreground transition-colors"
+            className="text-muted-foreground hover:text-foreground transition-all duration-200 hover:-translate-y-0.5"
           >
             Abordagem
           </Link>
           <Link
             href="#como-funciona"
-            className="text-muted-foreground hover:text-foreground transition-colors"
+            className="text-muted-foreground hover:text-foreground transition-all duration-200 hover:-translate-y-0.5"
           >
             Como funciona
           </Link>
           <Link
             href="#contato"
-            className="text-muted-foreground hover:text-foreground transition-colors"
+            className="text-muted-foreground hover:text-foreground transition-all duration-200 hover:-translate-y-0.5"
           >
             Contato
           </Link>
@@ -54,7 +54,13 @@ export function NavBar() {
             className="bg-primary text-primary-foreground hover:bg-primary/90"
             asChild
           >
-            <Link href="#contato">Agendar atendimento</Link>
+            <Link
+              href={siteConfig.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Agendar atendimento
+            </Link>
           </Button>
         </div>
       </div>

@@ -15,9 +15,8 @@ export function Hero() {
               Psicoterapia online e presencial
             </span>
           </div>
-          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-foreground text-balance">
-            Um espaço para compreender o que você sente, olhar para a sua
-            história e encontrar novos caminhos
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.08] text-foreground text-balance">
+            Um espaço para compreender o que você sente
           </h1>
           <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
             A psicoterapia pode ser um espaço de acolhimento, reflexão e
@@ -30,7 +29,11 @@ export function Hero() {
               className="bg-primary text-primary-foreground hover:bg-primary/90 px-8"
               asChild
             >
-              <Link href="#contato">
+              <Link
+                href={siteConfig.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Agende seu atendimento
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Link>

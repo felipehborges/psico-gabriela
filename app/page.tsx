@@ -18,15 +18,7 @@ const jsonLd = {
   url: siteConfig.url,
   telephone: siteConfig.phone,
   email: siteConfig.email,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: siteConfig.address.street,
-    addressLocality: siteConfig.address.city,
-    addressRegion: siteConfig.address.state,
-    postalCode: siteConfig.address.zip,
-    addressCountry: "BR",
-  },
-  openingHours: ["Mo-Th 09:00-18:00", "Fr 09:00-15:00"],
+  sameAs: [siteConfig.instagram.url],
 }
 
 export default function Home() {
