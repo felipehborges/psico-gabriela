@@ -454,3 +454,24 @@
   .zip-contact-action { padding-right:0; padding-left:0; }
   .zip-contact-action .zip-primary-button { max-width:100%; white-space:normal; }
 }
+
+/* The approach photo follows the copy on narrow screens. */
+.zip-hero h1 { font-size:clamp(38px,4.8vw,62px); }
+.zip-approach-body {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(280px,360px);
+  align-items:center;
+  gap:clamp(36px,5vw,72px);
+  margin-top:clamp(42px,5vw,64px);
+}
+.zip-approach-copy { min-width:0; }
+.zip-approach-copy .zip-columns { flex-direction:column; gap:24px; margin-top:0; }
+.zip-approach-copy .zip-columns article { flex:none; min-width:0; padding-top:16px; }
+.zip-approach-photo { width:100%; aspect-ratio:2/3; overflow:hidden; }
+.zip-approach-photo img { display:block; width:100%; height:100%; object-fit:cover; object-position:center; }
+
+@media (max-width:700px) {
+  .zip-hero h1 { font-size:clamp(36px,9.5vw,40px); }
+  .zip-approach-body { grid-template-columns:minmax(0,1fr); gap:40px; }
+  .zip-approach-photo { max-width:420px; margin-inline:auto; }
+}
