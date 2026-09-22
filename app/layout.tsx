@@ -1,20 +1,27 @@
 import { Analytics } from "@vercel/analytics/next"
 import type { Metadata } from "next"
-import { Instrument_Sans, Playfair_Display } from "next/font/google"
+import { IBM_Plex_Mono, Newsreader, Schibsted_Grotesk } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/sonner"
 import { siteConfig } from "@/config/site"
 import "./globals.css"
 
-const instrumentSans = Instrument_Sans({
+const schibstedGrotesk = Schibsted_Grotesk({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-editorial-sans",
   display: "swap",
 })
 
-const playfairDisplay = Playfair_Display({
+const newsreader = Newsreader({
   subsets: ["latin"],
-  variable: "--font-serif",
+  variable: "--font-editorial-serif",
+  display: "swap",
+})
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-editorial-mono",
   display: "swap",
 })
 
@@ -71,7 +78,7 @@ export default function RootLayout({
     <html
       lang="pt-BR"
       suppressHydrationWarning
-      className={`${instrumentSans.variable} ${playfairDisplay.variable}`}
+      className={`${schibstedGrotesk.variable} ${newsreader.variable} ${ibmPlexMono.variable}`}
     >
       <body className="font-sans antialiased">
         <ThemeProvider

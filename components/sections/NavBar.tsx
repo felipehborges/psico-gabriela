@@ -1,57 +1,42 @@
 "use client"
 
 import Link from "next/link"
-import { Leaf } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { ThemeToggle } from "@/components/ThemeToggle"
 import { siteConfig } from "@/config/site"
 
 export function NavBar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <nav className="sticky top-0 left-0 right-0 z-50 border-b border-border bg-background/95 backdrop-blur-md">
+      <div className="mx-auto flex max-w-[1240px] items-center justify-between gap-5 px-5 py-4 md:px-10 lg:px-18">
         <Link href="/" className="flex items-center gap-2">
-          <Leaf className="h-6 w-6 text-primary" />
-          <span className="font-serif text-xl text-foreground">
+          <span className="flex h-6 w-6 items-center justify-center text-primary text-xl leading-none">⌁</span>
+          <span className="font-serif text-[22px] leading-none text-foreground">
             {siteConfig.name}
           </span>
         </Link>
-        <div className="hidden md:flex items-center gap-8">
-          <Link
-            href="#sobre"
-            className="text-muted-foreground hover:text-foreground transition-all duration-200 hover:-translate-y-0.5"
-          >
-            Sobre
-          </Link>
-          <Link
-            href="#servicos"
-            className="text-muted-foreground hover:text-foreground transition-all duration-200 hover:-translate-y-0.5"
-          >
-            Psicoterapia
-          </Link>
+        <div className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
           <Link
             href="#abordagem"
-            className="text-muted-foreground hover:text-foreground transition-all duration-200 hover:-translate-y-0.5"
+            className="transition-colors hover:text-primary"
           >
             Abordagem
           </Link>
           <Link
-            href="#como-funciona"
-            className="text-muted-foreground hover:text-foreground transition-all duration-200 hover:-translate-y-0.5"
+            href="#sobre"
+            className="transition-colors hover:text-primary"
           >
-            Como funciona
+            Sobre
           </Link>
           <Link
             href="#contato"
-            className="text-muted-foreground hover:text-foreground transition-all duration-200 hover:-translate-y-0.5"
+            className="transition-colors hover:text-primary"
           >
             Contato
           </Link>
         </div>
-        <div className="flex items-center gap-2">
-          <ThemeToggle />
+        <div className="flex items-center">
           <Button
-            className="bg-primary text-primary-foreground hover:bg-primary/90"
+            className="rounded-full border border-primary/50 bg-transparent px-5 text-primary shadow-none hover:bg-primary hover:text-primary-foreground"
             asChild
           >
             <Link

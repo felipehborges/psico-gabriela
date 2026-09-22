@@ -1,13 +1,4 @@
-import { About } from "@/components/sections/About"
-import { Approach } from "@/components/sections/Approach"
-import { Contact } from "@/components/sections/Contact"
-import { Faq } from "@/components/sections/Faq"
-import { Footer } from "@/components/sections/Footer"
-import { Hero } from "@/components/sections/Hero"
-import { NavBar } from "@/components/sections/NavBar"
-import { Services } from "@/components/sections/Services"
-import { TherapyProcess } from "@/components/sections/TherapyProcess"
-import { TrustIndicators } from "@/components/sections/TrustIndicators"
+import { ZipDesign } from "@/components/ZipDesign"
 import { siteConfig } from "@/config/site"
 
 const jsonLd = {
@@ -23,21 +14,12 @@ const jsonLd = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <NavBar />
-      <Hero />
-      <TrustIndicators />
-      <About />
-      <Services />
-      <Approach />
-      <TherapyProcess />
-      <Faq />
-      <Contact />
-      <Footer />
-    </div>
+      <ZipDesign />
+    </>
   )
 }

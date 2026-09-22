@@ -1,4 +1,3 @@
-import { ChevronRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -6,27 +5,25 @@ import { siteConfig } from "@/config/site"
 
 export function Hero() {
   return (
-    <section className="pt-32 pb-20 px-6">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-        <div className="space-y-8">
-          <div className="inline-flex items-center gap-2 bg-secondary px-4 py-2 rounded-full">
-            <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-            <span className="text-sm text-muted-foreground">
-              Psicoterapia online e presencial
-            </span>
-          </div>
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.08] text-foreground text-balance">
-            Um espaço para compreender o que você sente
+    <section className="relative overflow-hidden px-5 py-14 md:px-10 md:py-20 lg:px-18 lg:py-26">
+      <div className="pointer-events-none absolute -right-24 top-4 select-none font-serif text-[30rem] font-light leading-none text-primary/[0.035]">⌁</div>
+      <div className="editorial-reveal relative mx-auto grid max-w-[1240px] items-center gap-12 lg:grid-cols-[1fr_470px] lg:gap-22">
+        <div>
+          <p className="mb-7 flex items-center gap-2.5 text-[12.5px] font-medium tracking-[0.04em] text-muted-foreground">
+            <span className="h-px w-5.5 bg-primary" /> Psicóloga clínica · Atendimento online e presencial
+          </p>
+          <h1 className="max-w-[10ch] font-serif text-[clamp(3rem,5.4vw,4.5rem)] font-light leading-[1.14] tracking-[-0.02em] text-foreground">
+            Um espaço para <em className="font-light text-primary">se escutar</em>.
           </h1>
-          <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
+          <p className="mt-7 max-w-xl text-[17px] leading-relaxed text-muted-foreground">
             A psicoterapia pode ser um espaço de acolhimento, reflexão e
             transformação — respeitando sua história, seu momento de vida e
             aquilo que você busca compreender.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="mt-9 flex flex-wrap items-center gap-6">
             <Button
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8"
+              className="rounded-full bg-primary px-7 text-primary-foreground shadow-none hover:bg-[#8a6a2b]"
               asChild
             >
               <Link
@@ -34,30 +31,28 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Agende seu atendimento
-                <ChevronRight className="ml-2 h-4 w-4" />
+                Agendar consulta
               </Link>
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-border text-foreground hover:bg-secondary bg-transparent"
+              variant="link"
+              className="h-auto p-0 text-muted-foreground underline-offset-4 hover:text-primary"
               asChild
             >
-              <Link href="#abordagem">Conheça a Logoterapia</Link>
+              <Link href="#abordagem">Conhecer a abordagem&nbsp; →</Link>
             </Button>
           </div>
         </div>
-        <div className="relative">
-          <div className="absolute -top-4 -left-4 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
-          <div className="absolute -bottom-4 -right-4 w-72 h-72 bg-accent/20 rounded-full blur-3xl" />
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+        <div className="relative mx-auto w-full max-w-[470px]">
+          <div className="absolute inset-0 translate-x-4 translate-y-4 border border-primary/45" />
+          <div className="relative aspect-4/5 overflow-hidden">
             <Image
               src="/professional-female-psychologist-in-warm-modern-of.jpg"
               alt={siteConfig.name}
               width={500}
               height={600}
-              className="object-cover w-full h-[600px]"
+              className="h-full w-full object-cover"
               priority
             />
           </div>

@@ -1,60 +1,22 @@
-import Image from "next/image"
 import { siteConfig } from "@/config/site"
 
 export function Approach() {
   return (
-    <section id="abordagem" className="py-24 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-6">
-            <p className="text-primary font-medium tracking-wide uppercase text-sm">
-              Minha Abordagem
-            </p>
-            <h2 className="font-serif text-4xl md:text-5xl leading-tight text-foreground text-balance">
-              Logoterapia: uma psicoterapia voltada para o sentido da vida
-            </h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Minha prática clínica é fundamentada na Logoterapia, abordagem
-              desenvolvida pelo psiquiatra e neurologista austríaco Viktor Emil
-              Frankl. Ela parte da compreensão de que o ser humano está
-              constantemente em busca de sentido para a própria existência.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Isso não exige encontrar uma grande resposta para a vida. Mesmo
-              diante de circunstâncias que não escolhemos, podemos refletir
-              sobre como nos posicionamos e sobre aquilo que dá significado à
-              nossa existência.
-            </p>
-
-            <div className="space-y-6 pt-4">
-              {siteConfig.approach.map((item) => (
-                <div key={item.number} className="flex gap-6 items-start">
-                  <span className="font-serif text-3xl text-primary/30">
-                    {item.number}
-                  </span>
-                  <div>
-                    <h4 className="font-medium text-foreground mb-2">
-                      {item.title}
-                    </h4>
-                    <p className="text-muted-foreground">{item.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="absolute inset-0 bg-accent/10 rounded-3xl transform rotate-3" />
-            <div className="relative rounded-3xl overflow-hidden">
-              <Image
-                src="/calming-therapy-session-environment--two-comfortab.jpg"
-                alt="Ambiente terapêutico"
-                width={600}
-                height={600}
-                className="object-cover w-full h-[600px]"
-              />
-            </div>
-          </div>
+    <section id="abordagem" className="bg-secondary px-5 py-20 md:px-10 md:py-28 lg:px-18 lg:py-35">
+      <div className="mx-auto max-w-[1080px]">
+        <div className="editorial-reveal text-center">
+          <span className="text-3xl text-primary">⌁</span>
+          <p className="mt-4 text-[12.5px] font-medium tracking-[0.04em] text-muted-foreground">Abordagem</p>
+          <h2 className="mx-auto mt-5 max-w-[17ch] font-serif text-[clamp(2.15rem,4.1vw,3.25rem)] font-light leading-[1.18] tracking-[-0.02em] text-foreground">Cada processo começa por uma escuta sem pressa.</h2>
+        </div>
+        <div className="mt-16 grid gap-9 md:grid-cols-3 md:gap-12">
+          {siteConfig.approach.map((item) => (
+            <article key={item.number} className="border-t border-foreground/15 pt-5">
+              <span className="font-mono text-[11px] text-primary">{item.number}</span>
+              <h3 className="mt-3 font-serif text-2xl font-normal text-foreground">{item.title}</h3>
+              <p className="mt-2.5 font-mono text-[12px] leading-relaxed text-muted-foreground">{item.description}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>
