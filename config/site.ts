@@ -12,6 +12,29 @@ export const siteConfig = {
     handle: "@psicologa.gabbriela",
     url: "https://www.instagram.com/psicologa.gabbriela",
   },
+  googleReviews: {
+    url: "https://maps.app.goo.gl/Z2MBPsq4QpXWdozP6",
+    rating: "5,0",
+    count: 28,
+    checkedAt: "22/09/2026",
+    excerpts: [
+      {
+        author: "Rosemeire Pedroso",
+        text: "Nunca tinha me sentido tão à vontade antes.",
+        url: "https://maps.app.goo.gl/11oVut18TTaSvcbR6",
+      },
+      {
+        author: "Mariana Nascimento Pereira de Jesus",
+        text: "ela é uma pessoa acolhedora, empática e verdadeira",
+        url: "https://maps.app.goo.gl/hKvjRqXnnrKSFHtm8",
+      },
+      {
+        author: "Heyassump",
+        text: "pude perceber uma evolução significativa",
+        url: "https://maps.app.goo.gl/PphMvRjL7KvtRNWH9",
+      },
+    ],
+  },
 
   // SEO
   url: "https://www.gabrielaalmeida.com.br",
