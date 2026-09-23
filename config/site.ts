@@ -39,7 +39,7 @@ export const siteConfig = {
   // SEO
   url: "https://www.gabrielaalmeida.com.br",
   description:
-    "Psicoterapia para adultos e idosos, online e presencial, com escuta acolhedora e abordagem fundamentada na Logoterapia.",
+    "Psicoterapia para adultos e idosos, presencial em Arujá, São Paulo, e online para todo o mundo, com escuta acolhedora e abordagem fundamentada na Logoterapia.",
   ogImage: "/og-image.jpg",
 
   // Trust indicators row

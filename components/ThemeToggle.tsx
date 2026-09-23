@@ -3,31 +3,31 @@
 import { useTheme } from "next-themes"
 import { Sun, Moon } from "lucide-react"
 import { useEffect, useState } from "react"
-import { Button } from "@/components/ui/button"
 
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme()
+  const { resolvedTheme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => setMounted(true), [])
 
   // Render placeholder to prevent layout shift during hydration
-  if (!mounted) return <div className="size-9" />
+  if (!mounted) return <span className="zip-theme-placeholder" aria-hidden="true" />
 
   return (
-    <Button
-      variant="ghost"
-      size="icon"
+    <button
+      type="button"
+      className="zip-theme-toggle"
       aria-label={
-        theme === "dark" ? "Mudar para modo claro" : "Mudar para modo escuro"
+        resolvedTheme === "dark" ? "Mudar para modo claro" : "Mudar para modo escuro"
       }
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      title={resolvedTheme === "dark" ? "Modo claro" : "Modo escuro"}
+      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
-      {theme === "dark" ? (
-        <Sun className="size-5" />
+      {resolvedTheme === "dark" ? (
+        <Sun size={18} aria-hidden="true" />
       ) : (
-        <Moon className="size-5" />
+        <Moon size={18} aria-hidden="true" />
       )}
-    </Button>
+    </button>
   )
 }

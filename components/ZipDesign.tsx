@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { MoreDetails } from "@/components/MoreDetails"
 import { RevealImage } from "@/components/RevealImage"
+import { ThemeToggle } from "@/components/ThemeToggle"
 import { siteConfig } from "@/config/site"
 
 export function ZipDesign() {
@@ -22,6 +23,7 @@ export function ZipDesign() {
           <Link href="#sobre">Sobre mim</Link>
           <Link href="#abordagem">Abordagem</Link>
           <Link href="#contato">Contato</Link>
+          <ThemeToggle />
         </nav>
       </header>
 
@@ -44,8 +46,8 @@ export function ZipDesign() {
               <em>encontrar novos caminhos.</em>
             </h1>
             <p className="zip-hero-description">
-              Psicoterapia presencial em Arujá e online, com acolhimento,
-              clareza e respeito à singularidade de cada história.
+              Psicoterapia presencial em Arujá, São Paulo, e online para todo o
+              mundo, com acolhimento e respeito à sua história.
             </p>
             <div className="zip-hero-actions">
               <Link
@@ -104,7 +106,8 @@ export function ZipDesign() {
             <p>
               Ofereço uma escuta acolhedora, sem julgamentos ou respostas
               prontas, para construirmos juntos um caminho que faça sentido para
-              você.
+              você. Atendo presencialmente em Arujá, São Paulo, e online onde
+              você estiver.
             </p>
             <MoreDetails label="Conheça mais sobre mim">
               <p>
@@ -148,7 +151,7 @@ export function ZipDesign() {
                 <article>
                   <span>03</span>
                   <h3>Online e presencial</h3>
-                  <p>Atendimento individual para adultos e idosos.</p>
+                  <p>Atendimento individual para adultos e idosos, presencial em Arujá, São Paulo, ou online para todo o mundo.</p>
                 </article>
               </div>
             </div>
@@ -262,7 +265,8 @@ export function ZipDesign() {
             <p>Vamos conversar?</p>
             <h2>Seu espaço de escuta começa aqui.</h2>
             <p className="zip-contact-description">
-              Entre em contato para agendar seu atendimento.
+              Entre em contato para agendar sua consulta presencial em Arujá,
+              São Paulo, ou online, de onde estiver no mundo.
             </p>
             <address>
               <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
@@ -275,7 +279,7 @@ export function ZipDesign() {
                 {siteConfig.phone}
               </a>
               <br />
-              Atendimento online e presencial em Arujá, São Paulo
+              Presencial em Arujá, São Paulo · Online para todo o mundo
             </address>
           </div>
           <div className="zip-contact-action">

@@ -39,6 +39,26 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
+.dark {
+  --background: #1e211f;
+  --foreground: #f0ece4;
+  --card: #292d29;
+  --card-foreground: #f0ece4;
+  --popover: #292d29;
+  --popover-foreground: #f0ece4;
+  --primary: #d3b985;
+  --primary-foreground: #22251f;
+  --secondary: #2a2e29;
+  --secondary-foreground: #f0ece4;
+  --muted: #2a2e29;
+  --muted-foreground: #c1bcb0;
+  --accent: #373b34;
+  --accent-foreground: #f0ece4;
+  --border: rgba(240, 236, 228, .16);
+  --input: rgba(240, 236, 228, .25);
+  --ring: #d3b985;
+}
+
 @theme inline {
   --font-sans: var(--font-editorial-sans), sans-serif;
   --font-serif: var(--font-editorial-serif), Georgia, serif;
@@ -159,6 +179,18 @@
 .zip-contact-action { flex:1 1 320px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:28px; min-height:280px; }
 .zip-contact-action img { width:120px; height:auto; object-fit:contain; }
 .zip-footer-brand { flex-wrap:wrap; }
+.zip-theme-toggle,.zip-theme-placeholder { display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; flex:none; border:1px solid var(--zip-line); border-radius:50%; background:transparent; color:var(--zip-ink); }
+.zip-theme-toggle { cursor:pointer; transition:background .2s ease,color .2s ease,border-color .2s ease; }
+.zip-theme-toggle:hover { border-color:var(--zip-gold); color:var(--zip-gold); }
+.zip-theme-toggle:focus-visible { outline:2px solid var(--zip-gold); outline-offset:3px; }
+.dark .zip-page { --zip-gold:#d3b985; --zip-gold-soft:#d9c699; --zip-ink:#f0ece4; --zip-muted:#c1bcb0; --zip-paper:#1e211f; --zip-warm:#292d29; --zip-line:rgba(240,236,228,.16); }
+.dark .zip-header { background:rgba(30,33,31,.94); }
+.dark .zip-outline-button { border-color:rgba(211,185,133,.55); }
+.dark .zip-outline-button:hover,.dark .zip-primary-button { color:#22251f!important; }
+.dark .zip-primary-button:hover { background:#e1cda6; color:#22251f!important; }
+.dark .zip-columns article { border-top-color:var(--zip-line); }
+.dark .zip-form input,.dark .zip-form textarea { border-bottom-color:var(--zip-line); }
+.dark .zip-brand img,.dark .zip-section-intro img,.dark .zip-contact-action img,.dark .zip-footer-brand img,.dark .zip-ghost-mark { filter:brightness(0) invert(.9); }
 @media (max-width:700px) { .zip-about-inner { grid-template-columns:1fr; }.zip-eyebrow { line-height:1.5; }.zip-contact-action { min-height:180px; } }
 
 /* Keep the small text comfortable to read throughout the live page. */
@@ -372,11 +404,13 @@
 .zip-google-summary div span,.zip-review-stars { color:var(--zip-gold); letter-spacing:3px; font-size:17px; white-space:nowrap; }
 .zip-google-summary p { margin:0; color:var(--zip-muted); font-size:13px; }
 .zip-review-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-top:clamp(32px,4vw,48px); }
-.zip-review-card { display:flex; flex-direction:column; align-items:flex-start; gap:22px; min-height:250px; padding:28px; border:1px solid var(--zip-line); border-radius:8px; background:#fffdf9; }
+.zip-review-card { display:flex; flex-direction:column; align-items:flex-start; gap:22px; min-height:250px; padding:28px; border:1px solid var(--zip-line); border-radius:8px; background:var(--zip-review-card,#fffdf9); color:var(--zip-ink); }
 .zip-review-card blockquote { flex:1; margin:0; font:400 clamp(21px,2vw,26px)/1.35 var(--font-editorial-serif),serif; }
 .zip-review-meta { display:flex; flex-direction:column; justify-content:flex-start; gap:6px; width:100%; padding-top:16px; border-top:1px solid var(--zip-line); color:var(--zip-muted); font-size:12px; }
 .zip-review-meta a,.zip-reviews-footnote a { color:var(--zip-gold); }
 .zip-reviews-footnote { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px 24px; margin-top:24px; color:var(--zip-muted); font-size:12px; }
+.dark .zip-page { --zip-review-card:#30342f; }
+.dark .zip-page h1 em,.dark .zip-page h2 em { color:var(--zip-gold); }
 
 @media (max-width:900px) {
   .zip-reviews-heading { align-items:flex-start; flex-direction:column; }
