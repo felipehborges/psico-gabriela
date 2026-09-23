@@ -132,6 +132,11 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes hero-photo-in {
+  from { opacity:0; transform:translateY(38px) scale(.96); }
+  to { opacity:1; transform:translateY(0) scale(1); }
+}
+
 .editorial-reveal { animation: rise-in 700ms cubic-bezier(.22,.61,.36,1) both; }
 
 /* Layout reproduced from the supplied Gabriela Almeida reference. */
@@ -268,17 +273,20 @@
   .zip-contact address a,.zip-footer nav a { transition:color 200ms ease; }
 }
 
-@media (prefers-reduced-motion:no-preference) {
-  .zip-hero-copy { animation:rise-in 700ms cubic-bezier(.22,.61,.36,1) both; }
-  .zip-portrait-frame { animation:rise-in 850ms 120ms cubic-bezier(.22,.61,.36,1) both; }
-}
-
 .zip-reveal-image {
   opacity:0;
   filter:blur(5px);
   transition:opacity 650ms ease,filter 800ms ease,transform 650ms cubic-bezier(.22,.61,.36,1);
 }
 .zip-reveal-image.is-loaded { opacity:1; filter:blur(0); }
+
+@media (prefers-reduced-motion:no-preference) {
+  .zip-hero-copy > .zip-eyebrow { animation:rise-in 800ms 120ms cubic-bezier(.22,.61,.36,1) both; }
+  .zip-hero-copy > h1 { animation:rise-in 950ms 250ms cubic-bezier(.22,.61,.36,1) both; }
+  .zip-hero-copy > .zip-hero-description { animation:rise-in 900ms 420ms cubic-bezier(.22,.61,.36,1) both; }
+  .zip-hero-copy > .zip-hero-actions { animation:rise-in 900ms 560ms cubic-bezier(.22,.61,.36,1) both; }
+  .zip-portrait-frame { animation:hero-photo-in 1100ms 350ms cubic-bezier(.22,.61,.36,1) both; }
+}
 
 @media (prefers-reduced-motion:reduce) {
   .zip-reveal-image { opacity:1; filter:none; }
@@ -380,19 +388,25 @@
   .zip-page > section { min-height:auto; }
 }
 
-@keyframes zip-scroll-reveal {
-  from { opacity:.65; transform:translateY(24px); }
-  to { opacity:1; transform:translateY(0); }
-}
-
-@supports (animation-timeline:view()) {
-  @media (prefers-reduced-motion:no-preference) {
-    .zip-section-intro,.zip-columns,.zip-google-reviews .zip-narrow,.zip-contact-inner {
-      animation:zip-scroll-reveal linear both;
-      animation-timeline:view();
-      animation-range:entry 0% entry 35%;
-    }
+@media (prefers-reduced-motion:no-preference) {
+  .zip-page.reveal-ready [data-reveal] {
+    transition:opacity 700ms cubic-bezier(.22,.61,.36,1), transform 700ms cubic-bezier(.22,.61,.36,1);
+    transition-delay:var(--reveal-delay,0ms);
   }
+  .zip-page.reveal-ready [data-reveal]:not(.is-visible) {
+    opacity:0;
+    transform:translateY(28px);
+  }
+  .zip-page.reveal-ready [data-reveal].is-visible {
+    opacity:1;
+    transform:translateY(0);
+  }
+  .zip-page.reveal-ready .zip-columns article.is-visible:hover {
+    transform:translateY(-5px);
+  }
+  .zip-about-copy,.zip-approach-photo,.zip-contact-action { --reveal-delay:120ms; }
+  .zip-columns article:nth-child(2),.zip-review-card:nth-child(2) { --reveal-delay:100ms; }
+  .zip-columns article:nth-child(3),.zip-review-card:nth-child(3) { --reveal-delay:200ms; }
 }
 
 .zip-google-reviews { padding:clamp(64px,7vw,88px) clamp(20px,5vw,72px); background:var(--zip-paper); }

@@ -2,12 +2,14 @@ import Image from "next/image"
 import Link from "next/link"
 import { MoreDetails } from "@/components/MoreDetails"
 import { RevealImage } from "@/components/RevealImage"
+import { ScrollReveal } from "@/components/ScrollReveal"
 import { ThemeToggle } from "@/components/ThemeToggle"
 import { siteConfig } from "@/config/site"
 
 export function ZipDesign() {
   return (
     <main className="zip-page">
+      <ScrollReveal />
       <header className="zip-header">
         <div className="zip-brand">
           <Image
@@ -82,7 +84,7 @@ export function ZipDesign() {
 
       <section id="sobre" className="zip-about">
         <div className="zip-narrow zip-about-inner">
-          <div className="zip-about-frame">
+          <div className="zip-about-frame" data-reveal>
             <div className="zip-about-photo">
               <RevealImage
                 src="/images/gabriela-sobre-nova.webp"
@@ -94,7 +96,7 @@ export function ZipDesign() {
               />
             </div>
           </div>
-          <div className="zip-about-copy" style={{ alignSelf: "start" }}>
+          <div className="zip-about-copy" data-reveal style={{ alignSelf: "start" }}>
             <p className="zip-section-label">Sobre mim</p>
             <h2>
               Uma escuta atenta à <em>sua história.</em>
@@ -127,7 +129,7 @@ export function ZipDesign() {
 
       <section id="abordagem" className="zip-approach">
         <div className="zip-narrow">
-          <div className="zip-section-intro">
+          <div className="zip-section-intro" data-reveal>
             <p>Minha abordagem</p>
             <h2>Logoterapia: um olhar para o sentido da vida.</h2>
             <div className="zip-section-description">
@@ -138,24 +140,24 @@ export function ZipDesign() {
           <div className="zip-approach-body">
             <div className="zip-approach-copy">
               <div className="zip-columns">
-                <article>
+                <article data-reveal>
                   <span>01</span>
                   <h3>Sem julgamentos</h3>
                   <p>Fale sobre o que vive, mesmo sem saber por onde começar.</p>
                 </article>
-                <article>
+                <article data-reveal>
                   <span>02</span>
                   <h3>No seu tempo</h3>
                   <p>Um processo individual, construído em conjunto.</p>
                 </article>
-                <article>
+                <article data-reveal>
                   <span>03</span>
                   <h3>Online e presencial</h3>
                   <p>Atendimento individual para adultos e idosos, presencial em Arujá, São Paulo, ou online para todo o mundo.</p>
                 </article>
               </div>
             </div>
-            <div className="zip-approach-photo">
+            <div className="zip-approach-photo" data-reveal>
               <RevealImage
                 src="/images/gabriela-livro.webp"
                 alt="Gabriela Almeida segurando um livro de Viktor Frankl sobre Logoterapia"
@@ -166,8 +168,9 @@ export function ZipDesign() {
               />
             </div>
           </div>
-          <MoreDetails label="Entenda melhor a Logoterapia" centered>
-            <p>
+          <div data-reveal>
+            <MoreDetails label="Entenda melhor a Logoterapia" centered>
+              <p>
               A Logoterapia, desenvolvida pelo psiquiatra e neurologista
               austríaco Viktor E. Frankl, é uma abordagem psicoterapêutica que
               coloca a busca por sentido no centro da experiência humana. Frankl
@@ -176,26 +179,27 @@ export function ZipDesign() {
               da pessoa em sua totalidade, considerando sua liberdade,
               responsabilidade e capacidade de encontrar sentido mesmo diante
               das dificuldades da vida.
-            </p>
-            <p>
+              </p>
+              <p>
               Na clínica, a Logoterapia não busca oferecer respostas prontas
               sobre qual deve ser o sentido da vida de alguém. O sentido é
               singular e precisa ser descoberto por cada pessoa. O processo
               terapêutico é um espaço para olhar para a própria história,
               compreender o que está sendo vivido, reconhecer possibilidades e
               refletir sobre escolhas, valores e aquilo que realmente importa.
-            </p>
-            <p>
+              </p>
+              <p>
               A partir desse olhar, a psicoterapia pode ajudar a pessoa a
               construir uma relação mais consciente com sua própria existência,
               encontrando novas possibilidades de ação e posicionamento diante
               das circunstâncias que enfrenta.
-            </p>
-            <p>
+              </p>
+              <p>
               Em cada história, existe uma pessoa única. E é a partir dessa
               singularidade que o caminho terapêutico é construído.
-            </p>
-          </MoreDetails>
+              </p>
+            </MoreDetails>
+          </div>
         </div>
       </section>
 
@@ -204,7 +208,7 @@ export function ZipDesign() {
         aria-labelledby="avaliacoes-titulo"
       >
         <div className="zip-narrow">
-          <div className="zip-reviews-heading">
+          <div className="zip-reviews-heading" data-reveal>
             <div>
               <p className="zip-section-label">Avaliações no Google</p>
               <h2 id="avaliacoes-titulo">Palavras de quem passou por aqui.</h2>
@@ -221,7 +225,7 @@ export function ZipDesign() {
           </div>
           <div className="zip-review-grid">
             {siteConfig.googleReviews.excerpts.map((review) => (
-              <article className="zip-review-card" key={review.author}>
+              <article className="zip-review-card" key={review.author} data-reveal>
                 <span
                   className="zip-review-stars"
                   role="img"
@@ -243,7 +247,7 @@ export function ZipDesign() {
               </article>
             ))}
           </div>
-          <div className="zip-reviews-footnote">
+          <div className="zip-reviews-footnote" data-reveal>
             <span>
               Trechos de avaliações públicas · consultadas em{" "}
               {siteConfig.googleReviews.checkedAt}
@@ -261,7 +265,7 @@ export function ZipDesign() {
 
       <section id="contato" className="zip-contact">
         <div className="zip-contact-inner">
-          <div className="zip-contact-copy">
+          <div className="zip-contact-copy" data-reveal>
             <p>Vamos conversar?</p>
             <h2>Seu espaço de escuta começa aqui.</h2>
             <p className="zip-contact-description">
@@ -282,7 +286,7 @@ export function ZipDesign() {
               Presencial em Arujá, São Paulo · Online para todo o mundo
             </address>
           </div>
-          <div className="zip-contact-action">
+          <div className="zip-contact-action" data-reveal>
             <Image src="/assets/mark.png" alt="" width={120} height={120} />
             <Link
               href={siteConfig.whatsappUrl}
