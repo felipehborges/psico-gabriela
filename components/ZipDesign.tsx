@@ -19,7 +19,7 @@ export function ZipDesign() {
             height={44}
             priority
           />
-          <span>Gabriela Almeida</span>
+          <span>Psicóloga Gabriela Almeida</span>
         </div>
         <nav className="zip-nav" aria-label="Navegação principal">
           <Link href="#sobre">Sobre mim</Link>
@@ -44,12 +44,12 @@ export function ZipDesign() {
               <span /> Gabriela Almeida · Psicóloga Clínica · CRP 06/177348
             </p>
             <h1>
-              Um espaço para se escutar, compreender o que você vive e{" "}
+              Um espaço para se escutar e{" "}
               <em>encontrar novos caminhos.</em>
             </h1>
             <p className="zip-hero-description">
               Psicoterapia presencial em Arujá, São Paulo, e online para todo o
-              mundo, com acolhimento e respeito à sua história.
+              mundo.
             </p>
             <div className="zip-hero-actions">
               <Link
@@ -71,8 +71,8 @@ export function ZipDesign() {
               <RevealImage
                 src="/images/gabriela-entrada-hq.webp"
                 alt="Gabriela Almeida sorrindo em seu consultório"
-                width={2400}
-                height={3600}
+                width={1024}
+                height={1536}
                 sizes="(max-width: 700px) 90vw, 470px"
                 quality={88}
                 priority
@@ -102,25 +102,25 @@ export function ZipDesign() {
               Uma escuta atenta à <em>sua história.</em>
             </h2>
             <p>
-              Sou psicóloga clínica, formada pela UMC em 2020, e atuo desde
-              2021.
-            </p>
-            <p>
-              Ofereço uma escuta acolhedora, sem julgamentos ou respostas
-              prontas, para construirmos juntos um caminho que faça sentido para
-              você. Atendo presencialmente em Arujá, São Paulo, e online onde
-              você estiver.
+              Olá, sou Gabriela Almeida, bacharel em Psicologia pela
+              Universidade de Mogi das Cruzes (UMC). Atuo na clínica psicológica
+              desde 2020, ano da minha formação. Minha prática é fundamentada
+              na Logoterapia, abordagem desenvolvida por Viktor Frankl, que tem
+              como eixo central a pessoa e a busca pelo sentido da vida.
             </p>
             <MoreDetails label="Conheça mais sobre mim">
               <p>
-                Ao longo da minha trajetória, venho acompanhando adultos e
-                idosos em momentos de sofrimento emocional, mudanças, escolhas e
-                busca por novos sentidos.
+                No atendimento psicológico sob a perspectiva logoterapêutica,
+                meu objetivo é te auxiliar a encontrar significado mesmo diante
+                de situações desafiadoras. O processo terapêutico envolve a
+                identificação de valores, propósitos e possibilidades de escolha,
+                favorecendo a superação de obstáculos e a construção de uma
+                existência mais consciente, autêntica e significativa.
               </p>
               <p>
-                Acredito que cada pessoa carrega uma história única. Por isso,
-                construímos o processo terapêutico em conjunto, respeitando seu
-                tempo e aquilo que faz sentido para você.
+                Se você sente que é hora de olhar para si com mais cuidado e
+                encontrar novos sentidos para a sua história, estou aqui para
+                caminhar com você nesse processo.
               </p>
             </MoreDetails>
           </div>
@@ -131,10 +131,10 @@ export function ZipDesign() {
         <div className="zip-narrow">
           <div className="zip-section-intro" data-reveal>
             <p>Minha abordagem</p>
-            <h2>Logoterapia: um olhar para o sentido da vida.</h2>
+            <h2>Logoterapia: um olhar para o sentido na vida.</h2>
             <div className="zip-section-description">
-              Um espaço para explorar sua história, seus valores e suas
-              escolhas.
+              “O sentido da vida não pode ser dado; ele precisa ser descoberto.”
+              <br />— Viktor E. Frankl
             </div>
           </div>
           <div className="zip-approach-body">
